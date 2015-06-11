@@ -19,6 +19,7 @@
    :else false))
 
 
+
 (defn- ->zipper-pos-start [pos form]
   (let [row (inc (- (:line pos) (-> form :start :line)))]
     {:row row
@@ -95,7 +96,6 @@
       (editor/replace ed (:start form) (:end form) (-> zloc (maybe-reposition-rightmost pos form)  f z/root-string))
       (editor/move-cursor ed (maybe-col-adjust-cursor pos opts))
       (format-keep-pos ed))))
-
 
 
 
@@ -315,6 +315,13 @@
           :reaction (fn [ed opts]
                       (paredit-cmd ed pe/splice-killing-forward {})))
 
+(behavior ::raise!
+          :triggers #{:parembrace.raise!}
+          :reaction (fn [ed opts]
+                      (paredit-cmd ed rewrite-clj.paredit/raise {})))
+
+
+
 (behavior ::move-to-previous!
           :triggers #{:parembrace.move-to-previous!}
           :reaction (fn [ed opts]
@@ -530,6 +537,13 @@
               :exec (fn []
                       (when-let [ed (pool/last-active)]
                         (object/raise ed :parembrace.splice-killing-backward! {})))})
+
+
+(cmd/command {:command :parembrace.raise
+              :desc "Parembrace: Raise"
+              :exec (fn []
+                      (when-let [ed (pool/last-active)]
+                        (object/raise ed :parembrace.raise! {})))})
 
 
 (cmd/command {:command :parembrace.move-to-previous

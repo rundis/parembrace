@@ -31,10 +31,17 @@ If you want try it out the lastest stuff you can clone it to the plugins
 folder for LightTable (check the https://github.com/LightTable/LightTable/wiki/User-Intro#user-settings[LT docs] for  where)
 
 
+== Extentions
+I'm planning to make it even easier than it currently is to easily add new or modified features. If you know your way around a clojure zipper
+you have a very good starting point. With the user plugin it should be fairly easy to add your own commands and behaviors.
+
+
+
 == Limitations
 No sweeping this under the carpet:
 
 - If you write illegal Clojure code, the features will fail (do nothing or throw errors)
+- It's not blisering fast (hoping th atom shell/electron release might help some here)
 - To keep the features snappy enough, keep your top level form size sensible (top level forms beyond 3-400 lines will not work nicely)
 - There is no strict mode option (and none coming in the immediate future)
 - Most if not all features require you to work in the context of top-level forms
@@ -270,6 +277,10 @@ familiar with clojure.zip
 |`[[1 2] \|[3 4]] => [[1 2 3 4]]` +
 `(str "Hello " \|"World!") => (str "Hello World!")`
 
+|Raise
+|Kill siblings and raise current node up one level to enclosing expression.
+|`[1 [2 \|3 4]] => [1 \|3]`
+
 |===
 
 NOTE: Except for the wrapping commands, placement of the cursor position after the command above is not very cleverly placed (:
@@ -301,7 +312,7 @@ NOTE: Except for the wrapping commands, placement of the cursor position after t
 Pull requests are most welcome. Please do not include the transpiled files (*_compiled*) in the PR.
 
 == History
-0.1.0 Initial release With a wide range of std paredit features supported
+0.1.0 Initial release With a wide range of  paredit features supported. A few novel/different commands available too !
 
 == License
 MIT, same as Light Table.

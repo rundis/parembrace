@@ -16,6 +16,7 @@
  [:editor.clj.common :lt.plugins.parembrace.core/splice!]
  [:editor.clj.common :lt.plugins.parembrace.core/splice-killing-backward!]
  [:editor.clj.common :lt.plugins.parembrace.core/splice-killing-forward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/raise!]
  [:editor.clj.common :lt.plugins.parembrace.core/move-to-previous!]
  [:editor.clj.common :lt.plugins.parembrace.core/slurp-forward-fully!]
  [:editor.clj.common :lt.plugins.parembrace.core/slurp-backward-fully!]
