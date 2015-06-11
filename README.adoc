@@ -50,6 +50,14 @@ No sweeping this under the carpet:
 
 == Usage
 
+All commands are available in the command browser. They are prefixed with __Parembrace:__
+
+There are no predefined keyboard shortcuts. So you have to figure out what makes sense to you. (And configure your __User keymap__
+Maybe you prefer something close to the defaults from paredit.el or maybe vims keybindings are more to your taste.
+
+
+
+
 === Basics
 
 [cols="3*a", options="header"]
