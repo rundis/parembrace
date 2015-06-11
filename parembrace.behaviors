@@ -1,0 +1,34 @@
+[[:app :lt.objs.plugins/load-js ["parembrace_compiled.js"]]
+
+
+ ;; Sideeffects
+ [:editor.clj.common :lt.plugins.parembrace.core/open-pair!]
+ [:editor.clj.common :lt.plugins.parembrace.core/slurp-forward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/slurp-backward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/barf-forward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/barf-backward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/kill!]
+ [:editor.clj.common :lt.plugins.parembrace.core/kill-one!]
+ [:editor.clj.common :lt.plugins.parembrace.core/wrap-around!]
+ [:editor.clj.common :lt.plugins.parembrace.core/wrap-fully-forward-slurp!]
+ [:editor.clj.common :lt.plugins.parembrace.core/split!]
+ [:editor.clj.common :lt.plugins.parembrace.core/join!]
+ [:editor.clj.common :lt.plugins.parembrace.core/splice!]
+ [:editor.clj.common :lt.plugins.parembrace.core/splice-killing-backward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/splice-killing-forward!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-to-previous!]
+ [:editor.clj.common :lt.plugins.parembrace.core/slurp-forward-fully!]
+ [:editor.clj.common :lt.plugins.parembrace.core/slurp-backward-fully!]
+
+ ; movements
+ [:editor.clj.common :lt.plugins.parembrace.core/move-next!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-prev!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-down!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-up!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-up-pos-right!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-right!]
+ [:editor.clj.common :lt.plugins.parembrace.core/move-left!]
+
+
+ ; Misc
+ [:editor.clj.common :lt.plugins.parembrace.core/select!]]
