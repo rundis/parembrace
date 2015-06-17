@@ -125,7 +125,7 @@ familiar with clojure.zip
 => [1 [\|2 [3]] 4] => [1 [2 \|[3]] 4] +
 => [1 [2 [\|3]] 4] => [1 [2 [3]] \|4]
 
-|Move next
+|Move previous
 |Move to previous node given a depth first traversal.
 |Reverse of move next
 
@@ -320,7 +320,7 @@ NOTE: Except for the wrapping commands, placement of the cursor position after t
 Pull requests are most welcome. Please do not include the transpiled files (*_compiled*) in the PR.
 
 == History
-0.1.0 Initial release With a wide range of  paredit features supported. A few novel/different commands available too !
+- 0.1.0 Initial release With a wide range of  paredit features supported. A few novel/different commands available too !
 
 == License
 MIT, same as Light Table.
