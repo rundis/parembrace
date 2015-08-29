@@ -24,7 +24,7 @@ It's still some way to go, but the basic features are mostly working pretty nice
 == Installation
 
 === Plugin manager
-You will find the plugin through the Light Table plugin manager under the name clj-light-refactor
+You will find the plugin through the Light Table plugin manager under the name parembrace
 
 === Development
 If you want try it out the lastest stuff you can clone it to the plugins
